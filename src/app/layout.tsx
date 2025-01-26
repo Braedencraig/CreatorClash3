@@ -18,7 +18,7 @@ export const generateViewport = () => ({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://creatorclash.com"),
+  metadataBase: new URL("https://thecreatorclash.com"),
   title: "Creator Clash 3",
   description:
     "Join us for Creator Clash 3 – the ultimate event where creators face off for a good cause. Don't miss out!",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title: "Creator Clash 3",
     description:
       "Experience the thrill of Creator Clash 3 – a battle of creators for a good cause! Get tickets now!",
-    url: "https://creatorclash3.com",
+    url: "https://thecreatorclash.com",
     type: "website",
     images: [
       {
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: "https://creatorclash.com",
+    canonical: "https://thecreatorclash.com",
   },
   icons: {
     icon: "/favicon.ico",
