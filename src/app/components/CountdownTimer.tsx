@@ -63,7 +63,7 @@ export const CountdownTimer = () => {
   return (
     <div
       style={{ fontFamily: "bitcount-mono-single-circle" }}
-      className="flex w-full md:w-auto justify-center space-x-4 md:space-x-12 mt-8 animate-fade-in"
+      className="flex w-full md:w-auto justify-center space-x-4 md:space-x-12 mt-8"
     >
       <Box type={TimeTypes.Days} num={currTime.days} />
       <Box type={TimeTypes.Hours} num={currTime.hours} />

@@ -15,7 +15,6 @@ export default function Home() {
           alt="Creator Clash 3 Banner"
         />
         <CountdownTimer />
-
         <EmailCaptureForm />
       </main>
       <footer className="flex flex-wrap items-center justify-center pt-8 md:pt-12">
