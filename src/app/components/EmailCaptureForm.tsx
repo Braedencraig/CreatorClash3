@@ -54,7 +54,7 @@ export const EmailCaptureForm = () => {
   return (
     <div
       style={{ fontFamily: '"geom-graphic", sans-serif' }}
-      className="flex flex-col items-center justify-center p-6  text-white rounded-lg shadow-lg max-w-md mx-auto space-y-4 mt-16 md:mt-24 border border-white"
+      className="flex flex-col items-center justify-center p-6 mb-8 text-white rounded-lg shadow-lg max-w-md mx-auto space-y-4 mt-16 md:mt-24 border border-white"
     >
       {success ? (
         <p className="text-white text-lg md:text-xl font-semibold text-center">
