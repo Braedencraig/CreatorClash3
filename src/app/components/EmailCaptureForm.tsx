@@ -54,10 +54,10 @@ export const EmailCaptureForm = () => {
   return (
     <div
       style={{ fontFamily: '"geom-graphic", sans-serif' }}
-      className="flex flex-col items-center justify-center p-6 bg-black text-white rounded-lg shadow-lg max-w-md mx-auto space-y-4 mt-8 md:mt-16 border border-white"
+      className="flex flex-col items-center justify-center p-6  text-white rounded-lg shadow-lg max-w-md mx-auto space-y-4 mt-16 md:mt-24 border border-white"
     >
       {success ? (
-        <p className="text-white text-xl font-semibold text-center">
+        <p className="text-white text-lg md:text-xl font-semibold text-center">
           Thank you for subscribing! We&apos;ll keep you updated.
         </p>
       ) : (
@@ -65,7 +65,7 @@ export const EmailCaptureForm = () => {
           onSubmit={handleSubmit}
           className="w-full flex flex-col space-y-4"
         >
-          <h2 className="text-2xl md:text-4xl font-bold text-center">
+          <h2 className="text-lg md:text-xl font-bold text-center">
             Want updates?
           </h2>
           <input
@@ -76,7 +76,7 @@ export const EmailCaptureForm = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className="p-3 rounded-lg border bg-black focus:outline-none focus:ring-2 focus:ring-white text-white transition duration-300"
+            className="p-3 text-md md:text-lg rounded-lg border bg-white focus:outline-none focus:ring-2 focus:ring-white text-black transition duration-300"
           />
           <div className="flex items-start space-x-2">
             <input
@@ -87,7 +87,7 @@ export const EmailCaptureForm = () => {
               className="w-5 h-5 text-white bg-gray-800 border-gray-700 rounded transition duration-300"
               required
             />
-            <label htmlFor="consent" className="text-sm">
+            <label htmlFor="consent" className="text-xs">
               I consent to my email being used for purposes related to The
               Creator Clash 3 updates and notifications.
             </label>
@@ -95,7 +95,7 @@ export const EmailCaptureForm = () => {
           <button
             type="submit"
             disabled={isSubmitting}
-            className={`text-xl md:text-2xl w-full p-3 border border-white bg-black text-white font-bold rounded-lg transition-all duration-300 shadow-lg transform ${
+            className={`text-md md:text-lg w-full p-3 border border-white bg-black text-white font-bold rounded-lg transition-all duration-300 shadow-lg transform ${
               isSubmitting
                 ? "opacity-50 cursor-not-allowed"
                 : "hover:bg-white hover:text-black hover:-translate-y-1"

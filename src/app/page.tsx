@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { CountdownTimer } from "./components/CountdownTimer";
 import { EmailCaptureForm } from "./components/EmailCaptureForm";
-import { VeepLogo } from "./components/VeepLogo";
+// import { VeepLogo } from "./components/VeepLogo";
 
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
         <CountdownTimer />
         <EmailCaptureForm />
       </main>
-      <footer className="flex flex-wrap items-center justify-center pt-8 md:pt-12">
+      {/* <footer className="flex flex-wrap items-center justify-center pt-8 md:pt-12">
         <div className="glassmorphism flex md:flex-row flex-col-reverse justify-center items-center gap-6 p-6 rounded-lg">
           <div className="max-w-[215px] flex justify-center">
             <VeepLogo />
@@ -36,7 +36,7 @@ export default function Home() {
             height={200}
           />
         </div>
-      </footer>
+      </footer> */}
     </div>
   );
 }

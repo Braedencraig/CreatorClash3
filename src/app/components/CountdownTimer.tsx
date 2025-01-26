@@ -13,7 +13,7 @@ enum TimeTypes {
 const Box = ({ type, num }: { type: string; num?: number }) => {
   return (
     <div className="flex justify-center flex-col items-center w-1/4 md:w-full text-white">
-      <span className="font-extrabold text-5xl md:text-8xl">
+      <span className="font-extrabold text-7xl md:text-[10rem]">
         {num ? num : "0"}
       </span>
       <p
