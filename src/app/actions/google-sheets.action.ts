@@ -31,8 +31,9 @@ export async function appendToSheet(
     });
 
     return { success: true };
-  } catch (error) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  } catch (error: any) {
     console.error("Error appending to sheet:", error);
-    return { success: false, error: "Failed to append data to Google Sheet." };
+    return { success: false, error: error };
   }
 }
