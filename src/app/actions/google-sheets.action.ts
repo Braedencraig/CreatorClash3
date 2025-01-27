@@ -11,11 +11,13 @@ export async function appendToSheet(
   }
 
   try {
-    const auth = new google.auth.JWT({
-      email: process.env.GOOGLE_CLIENT_EMAIL,
-      key: process.env.GOOGLE_PRIVATE_KEY
-        ? process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, "\n")
-        : "",
+    const credentials = {
+      client_email: process.env.GOOGLE_CLIENT_EMAIL,
+      private_key: process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, "\n"),
+    };
+
+    const auth = new google.auth.GoogleAuth({
+      credentials,
       scopes: ["https://www.googleapis.com/auth/spreadsheets"],
     });
 
@@ -31,9 +33,8 @@ export async function appendToSheet(
     });
 
     return { success: true };
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  } catch (error: any) {
+  } catch (error) {
     console.error("Error appending to sheet:", error);
-    return { success: false, error: error };
+    return { success: false, error: "Failed to append data to Google Sheet." };
   }
 }
