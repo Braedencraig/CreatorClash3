@@ -3,7 +3,11 @@
 import React, { useState } from "react";
 import { appendToSheet } from "@/app/actions/google-sheets.action";
 import { AiFillTikTok } from "react-icons/ai";
-import { FaSquareInstagram, FaSquareXTwitter } from "react-icons/fa6";
+import {
+  FaSquareInstagram,
+  FaSquareXTwitter,
+  FaYoutube,
+} from "react-icons/fa6";
 
 export const EmailCaptureForm = () => {
   const [email, setEmail] = useState("");
@@ -121,7 +125,7 @@ export const EmailCaptureForm = () => {
           rel="noopener noreferrer"
           className="text-white hover:text-gray-200 transition-all text-3xl md:text-6xl"
         >
-          <FaSquareInstagram className="p-[1px]" />
+          <FaSquareInstagram className="p-[3px]" />
         </a>
         <a
           href="https://x.com/TheCreatorClash?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
@@ -129,7 +133,15 @@ export const EmailCaptureForm = () => {
           rel="noopener noreferrer"
           className="text-white hover:text-gray-200 transition-all text-3xl md:text-6xl"
         >
-          <FaSquareXTwitter className="p-[1px]" />
+          <FaSquareXTwitter className="p-[3px]" />
+        </a>
+        <a
+          href="https://www.youtube.com/@thecreatorclash"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white hover:text-gray-200 transition-all text-3xl md:text-6xl"
+        >
+          <FaYoutube className="" />
         </a>
       </div>
     </div>
