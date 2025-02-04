@@ -1,0 +1,182 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 3rem;
+  /* min-height: 100vh; */
+  height: 100vh;
+  background: url("/assets/cc3-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  max-height: 900px;
+  min-height: 900px;
+}
+
+.main::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  display: block;
+  background-color: #000000;
+  opacity: 0.25;
+}
+
+.mainOther {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem;
+  /* min-height: 100vh; */
+  /* height: 100vh; */
+  background: url("/assets/mobilehero-min.png");
+  background-size: cover;
+  background-position: inherit;
+  background-repeat: no-repeat;
+  position: relative;
+  max-height: 336px;
+  min-height: 336px;
+}
+
+.mainOtherOther {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem;
+  /* min-height: 100vh; */
+  height: 155vh;
+  background: url("/assets/sponsorshipsbg.png");
+  background-size: cover;
+  background-position: inherit;
+  background-repeat: no-repeat;
+  position: relative;
+  /* max-height: 900px;
+  min-height: 900px; */
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  min-height: 100vh !important;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(0, 0, 0);
+  overflow-x: hidden;
+}
+
+.overlayContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  font-weight: 500;
+  font-size: 36px;
+  text-align: center;
+  height: 100%;
+}
+
+.overlayList {
+  list-style: none;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.center ul li {
+  margin-bottom: 20px;
+}
+
+.center li {
+  color: white;
+  margin-bottom: 30px;
+  transition: all 0.3s ease-in-out;
+}
+
+.center li:hover {
+  color: #f2cb00;
+}
+
+.center ul {
+  margin-bottom: 60px;
+}
+
+@media (max-width: 1200px) {
+  .main {
+    min-height: 900px;
+    max-height: 900px;
+  }
+
+  .mainOtherOther {
+    min-height: 100vh;
+    max-height: 100vh;
+    background-position: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    min-height: 860px;
+    max-height: 860px;
+    background-position: center;
+    padding: 2rem;
+  }
+
+  .mainOtherOther {
+    min-height: 100vh;
+    max-height: 100vh;
+    background-position: center;
+    min-height: 175vh;
+    max-height: 175vh;
+  }
+
+  .center ul {
+    margin-bottom: -10px;
+  }
+
+  .center {
+    margin-top: -2%;
+  }
+
+  .center li {
+    margin-bottom: 15px;
+  }
+
+  .mainOther {
+    max-height: 200px;
+    min-height: 200px;
+    background-position: center;
+  }
+
+  .modalOverlay {
+    padding: 2rem !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .main {
+    min-height: 840px;
+    max-height: 840px;
+  }
+}
+
+@media (max-width: 420px) {
+  .main {
+    min-height: 700px;
+    max-height: 700px;
+    padding: 1.2rem;
+  }
+}

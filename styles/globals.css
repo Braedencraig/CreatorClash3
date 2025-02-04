@@ -1,0 +1,2212 @@
+/* @font-face {
+  font-family: "pixeboy";
+  src: url("../public/assets/font/Pixeboy.ttf");
+  font-weight: 400;
+  font-style: normal;
+} */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #333;
+  color: #fff;
+  font-family: "geom-graphic", sans-serif;
+}
+
+select + .error,
+textarea + .error,
+input + .error {
+  margin-top: 10px;
+  color: red;
+}
+
+.pxglow {
+  font-family: "bitcount-mono-single-square", sans-serif !important;
+  text-transform: uppercase !important;
+  font-weight: 700 !important;
+  text-shadow: 0 0 8px currentColor !important;
+  letter-spacing: 0 !important;
+}
+
+.vhs-texture {
+  position: fixed;
+  z-index: 99999;
+  display: block;
+  inset: 0;
+  mix-blend-mode: difference;
+  opacity: 64%;
+  user-select: none !important;
+  pointer-events: none !important;
+}
+
+.button {
+  border: 0;
+  padding: 15px 32px;
+  margin: 0;
+  box-shadow: none;
+  font: inherit;
+  background-color: #ffffff;
+  color: #000000;
+  cursor: pointer;
+  border-radius: 40px;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 1);
+  transition: background-color 100ms ease-out, color 100ms ease-out, box-shadow 100ms ease-out;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
+  display: inline-flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #fcba00;
+  box-shadow: 0 0 8px rgba(252, 186, 0, 1);
+}
+
+.dropdown {
+  position: relative;
+  width: 245px;
+}
+
+.dropdown .button {
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo a {
+  display: block;
+}
+
+.logo img {
+  width: 140px;
+  height: auto;
+  display: block;
+}
+
+.sign-up-form form {
+  display: flex;
+  flex-flow: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 80px;
+}
+
+.sign-up-form form input {
+  border: 0;
+  outline-color: inherit;
+  background-color: #000000;
+  color: #ffffff;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 20px;
+  font: inherit;
+  font-size: 22px;
+  line-height: 2.5;
+  border-radius: 40px;
+}
+
+.sign-up-form form input:disabled {
+  opacity: 0.5;
+}
+
+.sign-up-form-container {
+  max-width: 1200px;
+  padding: 6rem 3rem;
+  margin: 0 auto;
+}
+
+.sign-up-form-fields {
+  display: flex;
+  flex-flow: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 20px;
+  width: 33.33333%;
+  flex-shrink: 0;
+}
+
+.sign-up-form-field {
+  display: flex;
+  flex-flow: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.sign-up-form-success,
+.sign-up-form-error {
+  text-align: center;
+}
+
+.sign-up-form-copy {
+  flex-grow: 1;
+}
+
+.sign-up-form-copy h2 {
+  margin-bottom: 10px;
+}
+
+.sign-up-form-copy p {
+  line-height: 1.75;
+  opacity: 0.64;
+}
+
+.moment {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  font-size: 16px;
+}
+.moment img {
+  margin-left: 10px;
+}
+
+.warning-info a {
+  font-size: 22px;
+  text-decoration: underline;
+  transition: all 0.3s ease-in-out;
+}
+
+.warning-info .buttons {
+  align-items: center;
+}
+
+.warning-info a:hover {
+  opacity: 0.7;
+}
+
+.annoucers-wrapper h2 {
+  margin-bottom: 30px;
+}
+
+.announcers {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 70px;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 24px;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  align-items: stretch;
+}
+
+.announcer {
+  width: 24%;
+  flex-grow: 1;
+  padding: 24px;
+  background: #121313;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.announcer p {
+  text-align: center !important;
+  margin-bottom: 20px !important;
+}
+
+.opacity-none {
+  opacity: 0;
+  height: 0px;
+}
+
+.opacity-none img {
+  display: none;
+}
+
+.announcer p {
+  width: 100% !important;
+  padding-top: 0;
+  margin-top: 0 !important;
+  max-width: 100% !important;
+}
+
+.announcer img {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.announcer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+}
+
+.announcer-socials a {
+  border: 2px solid #ffffff;
+  padding: 8px;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  min-height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.announcer h3 {
+  margin-top: 20px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  text-align: center;
+}
+
+.warning {
+  background: white;
+  color: black;
+  padding: 70px;
+  position: relative;
+}
+
+.warning-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.warning h3 {
+  color: #f22525;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.warning .close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+}
+
+.warning-info .text {
+  display: flex;
+  flex-direction: column;
+  max-width: 879px;
+  margin-top: 20px;
+}
+
+.warning-info .buttons {
+  margin-top: 30px;
+}
+
+.warning-info .buttons button.inverted {
+  background: white;
+  color: black;
+  border: 1px solid black;
+}
+
+.warning-info .buttons button.inverted:hover {
+  background: black;
+  color: white;
+}
+
+.warning-info .buttons button.inverted span {
+  filter: invert(0);
+}
+
+.warning-info .buttons button:hover {
+  background: white;
+  color: black;
+  border: 1px solid black;
+}
+
+.warning-info .buttons button.inverted:hover span {
+  filter: invert(1);
+}
+
+.warning-info .buttons button:hover span {
+  filter: invert(0);
+}
+
+.warning-info .buttons span {
+  margin-right: 12px;
+  position: relative;
+  top: 2px;
+}
+
+.warning-info .buttons button span {
+  filter: invert(1);
+}
+
+.warning-info p,
+.warning-info span {
+  font-size: 20px;
+}
+.warning-info span {
+  margin-top: 30px;
+}
+
+.warning img {
+  max-width: 30px;
+  max-height: 30px;
+}
+
+.cheeky-mobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.desktop-images {
+  max-width: 400px;
+}
+
+.revision-footer {
+  display: flex;
+  gap: 0px;
+  width: 100%;
+}
+
+.cheeky-mobile ul {
+  list-style: none;
+  width: 15%;
+}
+
+.cheeky-mobile {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+
+.signup form {
+  background-color: #000000;
+  width: 100%;
+  color: white;
+  padding-bottom: 60px;
+  border-bottom: 2px dashed rgba(255, 255, 255, 0.2);
+}
+.signup input {
+  max-width: 363px;
+  padding: 16px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  border: none;
+}
+
+.signup .contact-info {
+  width: 33%;
+}
+
+.signup .contact-info.message-margin {
+  width: 66%;
+}
+
+.signup label {
+  margin-bottom: 10px;
+  margin-top: 9px;
+}
+
+.ppv {
+  margin-top: -80px;
+  padding-bottom: 60px !important;
+  text-align: center;
+}
+
+.signup h2 {
+  margin-bottom: 40px;
+}
+
+.cheeky-socials .contact {
+  margin-bottom: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.cheeky-socials .contact:hover {
+  opacity: 0.7;
+}
+
+.cheeky-mobile .fight-card-matchup-socials a {
+  width: 34px;
+  height: 34px;
+  max-width: 34px;
+  max-height: 34px;
+  min-width: 34px;
+  min-height: 34px;
+}
+
+.cheeky-socials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.cheeky-socials .fight-card-matchup-socials {
+  margin-top: 0;
+  gap: 18px;
+}
+
+.cheeky-socials .fight-card-matchup-socials a:hover {
+  opacity: 0.7;
+}
+
+.cheeky-socials .fight-card-matchup-socials a {
+  transition: all 0.3s ease-in-out;
+}
+
+.cheeky-mobile li {
+  margin-bottom: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.cheeky-mobile li:hover {
+  opacity: 0.7;
+}
+
+form .contact-info {
+  width: 50%;
+}
+
+.flex-form {
+  display: flex;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-label {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-info textarea {
+  padding: 8px;
+  font-family: inherit;
+  font-size: 16px;
+  height: 167px;
+  border: none;
+  resize: none;
+  border-style: none;
+  border: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+.input-label:first-child {
+  margin-bottom: 30px;
+}
+
+.contact-form-wrapper label {
+  margin-bottom: 12px;
+}
+
+.contact-form-wrapper input {
+  max-width: 328px;
+  font-size: 16px;
+  height: 55px;
+  border: none;
+  padding: 8px;
+  font-family: inherit;
+  border-style: none;
+  border: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+.contact-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: inherit;
+}
+
+.contact-form {
+  background-color: gainsboro;
+  color: black;
+  padding: 90px 0;
+}
+
+.contact-form-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-form-wrapper h3 {
+  color: black;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.covid {
+  margin-top: 70px;
+}
+
+.sponsorships-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 190px;
+  align-items: flex-end;
+}
+
+.sponsorships-info ul {
+  font-size: 14px;
+  list-style-position: inside;
+  max-width: 448px;
+  border-bottom: 1px solid white;
+  padding-bottom: 40px;
+}
+
+.sponsorships-info li {
+  margin-bottom: 10px;
+}
+
+.sponsorships h5 {
+  margin-bottom: 20px;
+}
+
+.sponsorships h4 {
+  color: #f2c94c;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  max-width: 500px;
+}
+
+.sponsorships-border {
+  margin-bottom: 100px;
+}
+
+.sponsorships-info .media,
+.sponsorships-info .event,
+.sponsorships-info .other {
+  width: 50%;
+}
+
+.sponsorships-info .event {
+  margin-left: 100px;
+}
+
+.flex-it {
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between !important;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1600px;
+  font-weight: 700;
+  position: relative;
+}
+
+.plus {
+  margin-left: 8px;
+}
+
+.navigation-tickets {
+  gap: 25px;
+}
+
+.navigation ul,
+.navigation-tickets,
+.navigation-tickets-mobile {
+  display: flex;
+  padding-top: 0;
+  font-weight: 500;
+  font-size: 18px;
+  width: 50%;
+}
+
+.navigation ul {
+  align-items: center;
+}
+
+.navigation ul li {
+  list-style-type: none;
+  margin-right: 30px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.navigation ul li {
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.navigation ul li:hover {
+  color: #fcba00;
+  transition: all 0.3s ease-in-out;
+}
+
+.navigation ul {
+  justify-content: flex-start;
+}
+
+.navigation-tickets,
+.navigation-tickets-mobile {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.hero {
+  width: 100%;
+  max-width: 1600px;
+  position: relative;
+  top: -80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-sponsorships {
+  width: 100%;
+  max-width: 1600px;
+  position: absolute;
+  top: 400px;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-sponsorships h1 {
+  font-style: normal;
+  text-align: center;
+}
+
+.hero-sponsorships p {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 25px;
+  width: 100%;
+  padding: 0 20px;
+  max-width: 1024px;
+  text-align: center;
+}
+
+.hero-sponsorships a {
+  word-wrap: break-word;
+}
+
+.hero-sponsorships a {
+  font-weight: 700;
+  transition: all 0.3s ease-in-out;
+}
+
+.hero-sponsorships a:hover {
+  opacity: 0.7;
+}
+
+.hero h1 {
+  max-width: 548px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+}
+
+.hero-logo {
+  width: 640px;
+  height: auto;
+  margin-bottom: 20px;
+  padding-left: 2.9%;
+  max-width: 100%;
+}
+
+.hero h2 {
+  font-weight: inherit;
+}
+
+.hero .info {
+  width: 100%;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.hero .buttons,
+.warning-info .buttons {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.hamburger-react {
+  display: none;
+}
+
+.menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100% !important;
+  z-index: 20;
+  padding-top: 20px !important;
+}
+
+.menu-item {
+  margin-bottom: 20px;
+  margin-right: 0 !important;
+  width: 100%;
+}
+.navigation-tickets-mobile {
+  display: none;
+}
+
+.matchups {
+  padding: 70px;
+  background-color: #000000;
+}
+
+.matchups-container {
+  max-width: 1700px;
+  margin: 0 auto;
+}
+
+.matchups h2 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.matchups p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  margin-top: 23px;
+  width: 50%;
+  margin-bottom: 60px;
+}
+
+.tags {
+  font-size: 16px;
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  border-bottom: 1px solid white;
+  padding-bottom: 30px;
+  margin-bottom: 52px;
+}
+
+.tag {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  padding: 8px 16px;
+  text-transform: capitalize;
+  margin-right: 60px;
+  border: 1px solid white;
+  border-radius: 40px;
+  height: 44px;
+}
+
+.tag span {
+  background: black;
+  height: 8px;
+  width: 8px;
+  display: flex;
+  border-radius: 100%;
+  margin-right: 8px;
+  min-width: 8px;
+  min-height: 8px;
+}
+
+.active {
+  background: #ffffff;
+  border-radius: 40px;
+  color: black;
+  font-weight: 700;
+}
+
+.tag p {
+  width: 100%;
+  margin: 0;
+}
+
+.filter,
+.filter-mobile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 150px;
+}
+
+.filter-mobile {
+  display: none;
+}
+
+.filter p,
+.filter-mobile p {
+  margin: 0;
+  margin-left: 10px;
+}
+
+.filter img,
+.filter-mobile img {
+  width: 13.33px;
+  height: 12px;
+}
+
+.fight-card-matchup {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 65px;
+  gap: 40px;
+  min-width: 0;
+}
+
+.fight-card-matchup span {
+  font-size: 45px;
+  padding-bottom: 3px;
+  border-bottom: 9px solid #fcba00;
+  height: fit-content;
+  font-weight: 700;
+}
+
+.fight-card-matchup-fighter {
+  display: flex;
+  flex-direction: row;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.middle {
+  width: 100%;
+}
+
+.fight-card-matchup-fighter-info h3 {
+  color: #2f80ed;
+  margin-bottom: 0;
+  width: 40%;
+  font-size: 22px;
+}
+
+.fight-card-matchup-fight-image {
+  min-width: 0;
+}
+
+.fight-card-matchup-fight-image img {
+  width: 300px;
+  height: auto;
+}
+
+.border-fighter {
+  border: 8px solid white;
+}
+
+.fight-card-matchup-fighter-info .reverse-h3 {
+  color: #f22525;
+  margin-bottom: 8px;
+  text-align: right;
+}
+
+.fight-card-matchup-fighter-info {
+  margin-bottom: 40px;
+  align-items: center;
+  gap: 20px;
+}
+
+.fight-card-matchup-fighter-info,
+.fight-card-matchup-fighter-bio,
+.table-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.table-row a {
+  font-size: 16px;
+}
+
+.fight-card-matchup-fighter-bio p {
+  margin: 0;
+  width: 100%;
+  max-width: 217px;
+  font-size: 16px;
+  display: flex;
+  line-height: 23px;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.fight-card-matchup-fighter-bio .reverse-p {
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.mobile-socials-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.mobile-socials-container a {
+  padding: 8px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fight-card-matchup-socials a {
+  padding: 8px;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  min-height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.desktop-bottom {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.desktop-images {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.desktop-footer-socials {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.desktop-footer-socials a {
+  margin-bottom: 20px;
+}
+
+.desktop-images img {
+  margin-right: 70px;
+}
+
+.fight-card-matchup-socials {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.table-row {
+  border-bottom: 2px dashed rgba(255, 255, 255, 0.2);
+}
+
+.table-row:last-child {
+  border-bottom: 0;
+}
+
+.table-row p {
+  margin-bottom: 0;
+  padding-bottom: 16px;
+  font-size: 16px;
+  margin-top: 12px;
+}
+
+.table-row.no-border {
+  border-bottom: none;
+}
+
+.red {
+  color: #f22525;
+  font-size: 20px;
+}
+
+.blue {
+  color: #2f80ed;
+  font-size: 20px;
+}
+
+.table-row p:nth-child(2) {
+  text-align: center;
+}
+
+.sponsorships p {
+  max-width: 748px;
+  margin-bottom: 60px;
+}
+
+.table-row p:last-child {
+  text-align: right;
+}
+
+.mobile {
+  display: none;
+}
+
+.faq .accordion-title {
+  font-weight: 700;
+  font-size: 20px;
+  padding: 20px 0;
+}
+
+.faq .accordion-content {
+  font-size: 18px;
+  padding: 20px 0;
+}
+
+.faq .accordion-content p {
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+}
+
+.faq .accordion-content a {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.faq .accordion-wrapper {
+  border-bottom: 1px solid #828282;
+  margin-bottom: 0;
+}
+
+@media (max-width: 1400px) {
+
+  .table-row a {
+    font-size: 12px;
+  }
+
+  .fight-card-matchup-fighter-bio p {
+    font-size: 15px;
+    max-width: 170px;
+    line-height: 18px;
+  }
+
+  .table-row p {
+    margin-bottom: 0;
+    padding-bottom: 12px;
+    font-size: 12px;
+    margin-top: 12px;
+  }
+}
+
+.charity {
+  background: #121313;
+  color: #ffffff;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.charity-info {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.faq-bg,
+.sponsorships-bg {
+  background: #121313;
+  padding: 70px 0;
+}
+
+.faq,
+.sponsorships {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.faq h2,
+.sponsorships h2 {
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.sponsorships h2 {
+  margin-bottom: 20px;
+}
+
+.charity-logos {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+}
+
+.charity-logos a img {
+  height: auto;
+  /* height: 122px; */
+  width: 270px;
+}
+
+.charity-partners-logos a img {
+  width: 215px;
+}
+
+.charity-logos a {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+.charity-logos a p {
+  margin-top: 16px;
+}
+
+.charity-info h2,
+.charity-info h3 {
+  text-align: center;
+}
+
+.charity-info p {
+  font-size: 16px;
+  max-width: 675px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 23px;
+  padding-bottom: 33px;
+}
+
+.fight-card-matchup:last-child {
+  margin-bottom: 0;
+}
+
+.footer {
+  background: black;
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.signup {
+  margin: 0 auto;
+}
+
+.form {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form .input-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.form input {
+  max-width: 350px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  height: 48px;
+  padding: 8px;
+  border: none;
+  color: black;
+  border: 0.5px solid #000000;
+  margin-bottom: 20px;
+  font-size: 18px;
+  margin-right: 20px;
+  width: 100%;
+  font-family: inherit;
+}
+
+.border {
+  border-bottom: 1px solid #fff;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 60px;
+}
+
+.signup-info,
+.signup-form {
+  width: 48%;
+}
+
+.signup-form p {
+  width: 100%;
+  max-width: 400px;
+  text-align: right;
+  margin-right: 20px;
+}
+
+.signup-info h3 {
+  margin-bottom: 16px;
+}
+
+.signup-info p {
+  font-size: 20px;
+  max-width: 390px;
+}
+
+.mobile-images {
+  display: none;
+}
+
+@media (max-width: 1300px) {
+  .signup form .flex-form {
+    flex-direction: column;
+  }
+
+  .signup .contact-info {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .signup form input {
+    width: 100%;
+    max-width: 100%;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    border: none;
+  }
+
+  .signup .contact-info.message-margin {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1200px) {
+
+  .logo img {
+    width: 100px;
+  }
+
+  .navigation ul,
+  .navigation-tickets {
+    display: none;
+  }
+  
+
+  .border-fighter {
+    border: 4px solid white;
+  }
+
+  .announcers {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .announcer {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 48.5%;
+  }
+
+  .charity-logos {
+    justify-content: center;
+  }
+
+  .matchups {
+    padding: 30px;
+  }
+
+  .matchups p {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .table-row p {
+    margin-bottom: 0;
+    margin-top: 12px;
+  }
+
+  .middle p {
+    margin-bottom: 0;
+  }
+
+  .matchups .tag p,
+  .matchups .filter p {
+    margin-bottom: 0;
+  }
+
+  .navigation-tickets-mobile {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .navigation-tickets-mobile ul {
+    list-style: none;
+  }
+
+  .hamburger-react {
+    display: inherit;
+    z-index: 100;
+  }
+
+  .hero h1 {
+    text-align: center;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
+
+  .hero h2 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+
+  }
+
+  /* .hero .buttons {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  } */
+
+  .hero .buttons button.inverted {
+    margin-left: 0;
+  }
+
+  .fight-card-matchup-fight-image img {
+    width: 240px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .sign-up-form form {
+    flex-flow: column;
+  }
+  
+  .sign-up-form-fields {
+    width: 100%;
+  }
+  
+  .sign-up-form-copy {
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  .fight-cards {
+    display: none;
+  }
+
+  .desktop-images img {
+    margin-right: 0px;
+  }
+
+  .desktop-images {
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  .reverse {
+    width: 50%;
+  }
+
+  .revision-footer {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .flex-form {
+    flex-direction: column;
+  }
+
+  .tag {
+    margin-right: 30px;
+  }
+
+  .matchups h2 {
+    padding-top: 40px;
+  }
+  form {
+    flex-direction: column;
+  }
+
+  .message-margin {
+    margin-top: 30px;
+  }
+
+  form .contact-info {
+    width: 100%;
+  }
+
+  .contact-form-wrapper input {
+    max-width: 100%;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+  }
+
+  .contact-form-wrapper {
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .sponsorships-bg {
+    padding: 30px 0;
+  }
+
+  .sponsorships-border {
+    margin-bottom: 50px;
+  }
+
+  .sponsorships-info .media,
+  .sponsorships-info .event,
+  .sponsorships-info .other {
+    width: 100%;
+  }
+
+  .sponsorships-info {
+    height: 300px;
+  }
+
+  .sponsorships-info .event {
+    margin-top: 30px;
+  }
+
+  .sponsorships-info ul {
+    max-width: 100%;
+  }
+
+  .sponsorships-info {
+    flex-direction: column;
+    gap: inherit;
+    height: inherit;
+  }
+
+  .faq .accordion-title {
+    font-size: 16px;
+  }
+
+  .faq .accordion-content p {
+    font-size: 14px;
+  }
+
+  .mobile-images {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    align-items: center;
+  }
+
+  .mobile-images img {
+    height: 100%;
+  }
+
+  .border {
+    flex-direction: column;
+  }
+
+  .border {
+    border-top: 1px solid #fff;
+    padding-top: 40px;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .signup-info,
+  .signup-form {
+    width: 100%;
+  }
+
+  .signup-info p {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .form input {
+    max-width: 100%;
+    margin-right: 0px;
+    border: none;
+    font-family: inherit;
+    border-style: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    border: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+  }
+
+  .input-wrapper p {
+    max-width: 100%;
+    text-align: left;
+    padding-left: 20px;
+    font-size: 12px;
+  }
+
+  .signup-info p,
+  .form input {
+    font-size: 14px;
+    font-family: inherit;
+  }
+
+  .charity-logos a img {
+    width: 100%;
+  }
+
+  .signup {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+
+  .charity-logos:not(.charity-partners-logos) a {
+    width: 80%;
+    max-width: 300px;
+  }
+
+  .charity-logos a,
+  .charity-info p {
+    font-size: 16px;
+  }
+
+  .hero h2,
+  .hero h1 {
+    width: 100%;
+  }
+
+  .matchups {
+    padding: 0;
+  }
+
+  .matchups h2,
+  .matchups-info {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .filter-mobile {
+    padding-left: 30px;
+    width: 100%;
+  }
+
+  .filter-mobile p {
+    padding-left: 0;
+  }
+
+  .tags {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: hidden;
+  }
+
+  .reverse {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    text-align: right;
+  }
+
+  .fight-card-mobile-images {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .fight-card-mobile-images .stat {
+    flex-grow: 1;
+  }
+
+  .fight-card-mobile-images > div {
+    min-width: 0;
+  }
+
+  .reverse .accordion-title {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .fight-card-matchup-socials {
+    justify-content: flex-start;
+  }
+
+  .fight-card-matchup-socials a {
+    width: 34px;
+    height: 34px;
+    max-width: 34px;
+    max-height: 34px;
+    min-width: 34px;
+    min-height: 34px;
+  }
+
+  .not-reverse {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 50%;
+  }
+
+  .fight-card-matchup-socials img {
+    max-width: 16px;
+  }
+  .fight-card-matchup-fighter-info h3 {
+    width: 100%;
+    margin-top: 16px;
+    margin-bottom: 8px;
+  }
+
+  .fight-card-matchup-fighter-info p {
+    width: 100%;
+    max-width: 200px;
+    margin-top: 0;
+    padding-left: 0;
+  }
+
+  .reverse p {
+    padding-right: 0;
+  }
+
+  .fight-card-mobile-images span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    border-bottom: 5px solid #fcba00;
+  }
+
+  .mobile-vs {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    background-color: black;
+    height: 61px;
+    width: 61px;
+    border-radius: 40px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 25%;
+  }
+
+  .mobile-vs span {
+    margin-top: -0.4em;
+  }
+
+  .fight-card-matchup {
+    background-color: #000;
+    padding: 24px;
+  }
+
+  .fight-card-mobile-images img {
+    width: 100%;
+    height: auto;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .filter {
+    min-width: 150px;
+    display: none;
+  }
+
+  .filter-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+  }
+
+  .tags :nth-child(3) {
+    /* min-width: 220px; */
+    text-align: center;
+  }
+
+  .tags {
+    overflow-x: scroll;
+    border: none;
+  }
+
+  .fight-card-matchup {
+    margin-bottom: 30px;
+    padding: 20px;
+  }
+
+  .desktop-bottom {
+    flex-direction: column;
+  }
+
+  .desktop-bottom .cheeky-socials {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    gap: 30px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  .desktop-bottom .cheeky-socials .fight-card-matchup-socials {
+    gap: 40px;
+  }
+
+  .desktop-bottom .cheeky-socials .fight-card-matchup-socials a {
+    width: 34px;
+    height: 34px;
+    max-width: 34px;
+    max-height: 34px;
+    min-width: 34px;
+    min-height: 34px;
+  }
+
+  .moment {
+    text-align: center;
+    justify-content: center;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 900px) {
+  .fight-card-mobile-images img {
+    /* max-width: 100%; */
+    width: 100%;
+    height: auto;
+    /* max-height: 243px; */
+  }
+}
+
+@media (max-width: 768px) {
+  .fight-card-matchup-fighter-info p {
+    font-size: 12px;
+    max-width: 140px;
+    padding: 0;
+    margin-bottom: 12px;
+  }
+
+  .fight-card-mobile-images img {
+    max-height: 340px;
+  }
+
+  .mobile-vs {
+    top: 80px;
+  }
+
+  .hero-sponsorships {
+    top: 33%;
+  }
+
+  .hero-sponsorships h1 {
+    margin-bottom: 20px;
+  }
+
+  .hero-sponsorships p {
+    width: 100%;
+    padding: 0 30px;
+    font-size: 18px;
+  }
+
+  .fight-card-matchup-fighter-info h3 {
+    padding-left: 0px;
+  }
+
+  .fight-card-matchup-fighter-info .reverse-h3 {
+    padding-left: 10px;
+  }
+
+  .warning-info a {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+
+  .announcers {
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  .announcer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .announcer img {
+    max-width: 300px;
+  }
+
+  .announcer p {
+    text-align: center;
+  }
+
+  .warning .close {
+    width: 22px;
+    height: 22px;
+    top: 20px;
+    right: 20px;
+  }
+
+  .warning {
+    padding: 20px;
+  }
+
+  /* .warning-info .buttons {
+    flex-direction: column;
+  } */
+
+  .warning p,
+  .warning span {
+    font-size: 14px;
+  }
+
+  /* .charity-logos img,
+  .charity-logos svg {
+    max-width: 200px;
+  } */
+
+  .faq-bg {
+    padding: 30px 0;
+  }
+
+  .covid {
+    margin-top: 30px;
+  }
+
+  .accordion-content,
+  .accordion-title {
+    font-size: 12px;
+  }
+
+  .fight-card-matchup-socials a {
+    width: 26px;
+    height: 26px;
+    max-width: 26px;
+    max-height: 26px;
+    min-width: 26px;
+    min-height: 26px;
+    padding: 0px;
+  }
+
+  .fight-card-matchup-socials a img {
+    height: 12px;
+    width: 12px;
+  }
+
+  .warning-info .buttons {
+    align-items: baseline;
+  }
+}
+
+/* width */
+/* ::-webkit-scrollbar {
+  width: 8px;
+} */
+
+/* Track */
+/* ::-webkit-scrollbar-track {
+  background: #fff;
+} */
+
+/* Handle */
+/* ::-webkit-scrollbar-thumb {
+  background: #444;
+} */
+
+/* Handle on hover */
+/* ::-webkit-scrollbar-thumb:hover {
+  background: #444;
+} */
+
+.accordion-item {
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);
+  height: auto;
+  max-height: 9999px;
+}
+
+.accordion-item.collapsed {
+  max-height: 0;
+  transition: max-height 0.35s cubic-bezier(0, 1, 0, 1);
+}
+
+.accordion-title {
+  cursor: pointer;
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.accordion-title p {
+  width: fit-content;
+}
+
+/* .accordion-title::after {
+  content: "";
+  width: 0;
+  height: 0;
+}
+
+.accordion-title.open::after {
+  content: "";
+} */
+
+.accordion-content {
+  padding-top: 20px;
+}
+.accordion-wrapper {
+  margin-bottom: 20px;
+}
+
+/* .accordion-content {
+  padding: 1em 1.5em;
+} */
+
+.nextimg {
+  width: 100%;
+  height: auto;
+}
+
+/* @media (max-width: 500px) {
+  .fight-card-mobile-images img {
+    max-height: 210px;
+  }
+} */
+
+.hero-sponsorships form button.inverted {
+  border: none;
+  padding: 0;
+  text-align: center;
+  margin: 0 auto;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  background: none;
+  color: #fcba00;
+  padding: 10px 20px;
+  width: 215px;
+  border: 1px solid #fcba00;
+}
+
+.hero-sponsorships h1 {
+  margin-bottom: 32px;
+}
+
+.hero-sponsorships form button.inverted:hover {
+  background: #000;
+  color: #ffff;
+  border: 1px solid #fff;
+}
+
+.hero-sponsorships form {
+  background-color: black;
+  padding: 72px 250px;
+  /* max-width: 860px; */
+}
+
+.hero-sponsorships input {
+  background: white;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  border: none;
+  max-width: 337px;
+  font-size: 16px;
+  height: 55px;
+  border: none;
+  padding: 8px;
+  font-family: inherit;
+  border-style: none;
+  border: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+.ppv-input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.input-flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.ppv-input label {
+  font-size: 16px;
+  margin-bottom: 12px;
+  margin-top: 20px;
+}
+
+.top-wrapper {
+  max-width: 860px;
+  margin: 0 auto;
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.mid-wrapper {
+  max-width: 860px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 60px;
+}
+
+.hero-sponsorships .font {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.hero-sponsorships .mid-wrapper input,
+.hero-sponsorships .mid-wrapper div {
+  width: 100%;
+  max-width: 100%;
+}
+
+input[type="checkbox"],
+.target {
+  margin: 0;
+  /* height: 20px;
+    width: 20px; */
+}
+
+input[type="radio"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  appearance: none;
+  /* For iOS < 15 to remove gradient background */
+  background-color: #fff;
+  /* Not removed via appearance */
+  margin: 0;
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  /* width: 1.15em;
+    height: 1.15em; */
+  border: 0.15em solid currentColor;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  padding: 9px;
+  background: white;
+  width: 30px;
+  height: 30px;
+}
+
+input[type="radio"]::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  /* height: 0.65em; */
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em #fcba00;
+  color: #fcba00;
+  background-color: #fcba00;
+  border: 5px solid #fcba00;
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1);
+}
+
+.bottom-wrap p {
+  margin-bottom: 32px;
+}
+
+.bottom-wrap {
+  margin-bottom: 60px;
+}
+
+.box {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.box label {
+  margin-left: 26px;
+}
+
+.hero-sponsorships form {
+  margin-bottom: 80px;
+}
+
+@media (max-width: 768px) {
+  .input-flex {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .hero-sponsorships form {
+    padding: 45px 30px;
+  }
+
+  .hero-sponsorships input {
+    max-width: 100%;
+  }
+
+  .hero-sponsorships .font {
+    padding: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero .info h2 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero .info h2 {
+    font-size: 16px;
+  }
+}
