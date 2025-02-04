@@ -195,7 +195,7 @@ export default function Matchups() {
       },
       fighter2: {
         name: "Wren (Corridor Digital)",
-        height: "6' 1\"",
+        height: "6' 2\"",
         weight: "175 LBS",
         img: weichmanPic,
         socials: {
