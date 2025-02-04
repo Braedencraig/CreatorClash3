@@ -39,7 +39,7 @@ export default function Faq() {
     },
     {
       q: "Will x-item be allowed in the arena?",
-      a: <>{"Please reference"} <Link href="https://www.amaliearena.com/arena-info" target="_blank" rel="noopener noreferrer">Amalie Arena's arena info guide</Link> {"for further information regarding the venue's policies & procedures."}</>,
+      a: <>{"Please reference"} <Link href="https://www.amaliearena.com/arena-info" target="_blank" rel="noopener noreferrer">{"Amalie Arena's arena info guide"}</Link> {"for further information regarding the venue's policies & procedures."}</>,
     },
     {
       q: "Who is Creator Clash fundraising for?",
