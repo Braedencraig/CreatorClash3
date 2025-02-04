@@ -84,10 +84,9 @@ export default function Matchups() {
         weight: "185 LBS",
         img: smg4Pic,
         socials: {
-          tiktok: "https://www.tiktok.com/@smg4official",
-          insta: "https://www.instagram.com/smg4official/",
-          youtube: "https://www.youtube.com/c/SMG4",
-          twitter: "https://twitter.com/smg4official",
+          insta: "https://www.instagram.com/glitch_prod/",
+          youtube: "https://www.youtube.com/c/GLITCH",
+          twitter: "https://twitter.com/glitch_prod",
         },
       },
       fighter2: {
@@ -196,7 +195,7 @@ export default function Matchups() {
       },
       fighter2: {
         name: "Wren (Corridor Digital)",
-        height: "6' 1\"",
+        height: "6' 2\"",
         weight: "175 LBS",
         img: weichmanPic,
         socials: {

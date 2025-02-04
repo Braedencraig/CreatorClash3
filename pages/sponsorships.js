@@ -1,15 +1,13 @@
-import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Navigation from "../components/navigation";
 import { useState } from "react";
 import Link from "next/link";
-import Dropdown from "../components/dropdown";
 import Footer from "../components/footer";
-import chevron from "../public/assets/chevron.png";
 import tiktok from "../public/assets/tiktok.png";
 import insta from "../public/assets/insta.png";
 import twitter from "../public/assets/twitter.png";
+import youtube from "../public/assets/youtube.png";
 import cartBlack from "../public/assets/cartblack.png";
 import close from "../public/assets/close.png";
 import SEO from "../components/seo";
@@ -97,25 +95,32 @@ export default function Home() {
                 <div className="mobile-socials">
                   <div className="mobile-socials-container">
                     <a
-                      href="https://www.tiktok.com/@creatorclashofficial?lang=en"
+                      href="https://www.tiktok.com/@creatorclashofficial"
                       target="_blank"
                       rel="noreferrer"
                     >
                       <Image src={tiktok} alt="TikTok" />
                     </a>
                     <a
-                      href="https://www.instagram.com/thecreatorclash/?hl=en"
+                      href="https://www.instagram.com/thecreatorclash"
                       target="_blank"
                       rel="noreferrer"
                     >
                       <Image src={insta} alt="Instagram" />
                     </a>
                     <a
-                      href="https://twitter.com/TheCreatorClash?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+                      href="https://twitter.com/TheCreatorClash"
                       target="_blank"
                       rel="noreferrer"
                     >
                       <Image src={twitter} alt="Twitter" />
+                    </a>
+                    <a
+                      href="https://youtube.com/@thecreatorclash"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <Image src={youtube} alt={"YouTube"} />
                     </a>
                   </div>
                 </div>

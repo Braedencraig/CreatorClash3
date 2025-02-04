@@ -8,7 +8,7 @@ import logo from "../public/assets/cc3.png";
 import tiktok from "../public/assets/tiktok.png";
 import insta from "../public/assets/insta.png";
 import twitter from "../public/assets/twitter.png";
-import chevron from "../public/assets/chevron.png";
+import youtube from "../public/assets/youtube.png";
 import Button from "./button";
 
 export default function Navigation({
@@ -73,25 +73,32 @@ export default function Navigation({
         <div className="cheeky-socials">
           <div className="fight-card-matchup-socials">
             <a
-              href="https://www.tiktok.com/@creatorclashofficial?lang=en"
+              href="https://www.tiktok.com/@creatorclashofficial"
               target="_blank"
               rel="noreferrer"
             >
               <Image src={tiktok} alt={"Tik tok"} />
             </a>
             <a
-              href="https://www.instagram.com/thecreatorclash/?hl=en"
+              href="https://www.instagram.com/thecreatorclash"
               target="_blank"
               rel="noreferrer"
             >
               <Image src={insta} alt={"Instagram"} />
             </a>
             <a
-              href="https://twitter.com/TheCreatorClash?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+              href="https://twitter.com/TheCreatorClash"
               target="_blank"
               rel="noreferrer"
             >
               <Image src={twitter} alt={"Twitter"} />
+            </a>
+            <a
+              href="https://youtube.com/@thecreatorclash"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Image src={youtube} alt={"YouTube"} />
             </a>
           </div>
         </div>

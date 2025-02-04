@@ -43,11 +43,11 @@ export default function Faq() {
     },
     {
       q: "Who is Creator Clash fundraising for?",
-      a: <>{"CC3 is fundraising for Stand Up To Cancer. For more information on the charity,"} <Link href="https://standuptocancer.org/" target="_blank" rel="noopener noreferrer">click here</Link>{"."}</>,
+      a: <>{"CC3 is fundraising for Stand Up To Cancer. For more information on the charity,"} <Link href="https://tiltify.com/su2c/creatorclash" target="_blank" rel="noopener noreferrer">click here</Link>{"."}</>,
     },
     {
       q: "How can I donate?",
-      a: <>{"You can donate directly to Stand Up To Cancer"} <Link href="https://standuptocancer.org/donate" target="_blank" rel="noopener noreferrer">here</Link>{"."}</>,
+      a: <>{"You can donate directly to Stand Up To Cancer"} <Link href="https://tiltify.com/su2c/creatorclash" target="_blank" rel="noopener noreferrer">here</Link>{"."}</>,
     },
     {
       q: "I can't donate, but I'd like to run my own fundraiser. How can I do that?",
