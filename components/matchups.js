@@ -220,7 +220,7 @@ export default function Matchups() {
         },
       },
       fighter2: {
-        name: "Funky Frogbait",
+        name: "FunkyFrogBait",
         height: "5' 4\"",
         weight: "125 LBS",
         img: funkyFrogBaitPic,
