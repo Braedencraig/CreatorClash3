@@ -58,7 +58,10 @@ export default function Matchups() {
         weight: "147 LBS",
         img: tubboPic,
         socials: {
+          insta: "https://www.instagram.com/tubboLive",
           twitch: "https://www.twitch.tv/tubbo",
+          twitter: "https://www.x.com/tubboLive",
+          youtube: "https://www.youtube.com/tubboLive",
         },
       },
       fighter2: {
@@ -67,7 +70,10 @@ export default function Matchups() {
         weight: "147 LBS",
         img: sapnapPic,
         socials: {
+          insta: "https://www.instagram.com/sapnapinsta",
           twitch: "https://www.twitch.tv/sapnap",
+          twitter: "https://www.twitter.com/sapnap",
+          youtube: "https://www.youtube.com/sapnap",
         },
       },
     },
@@ -229,7 +235,7 @@ export default function Matchups() {
     },
     {
       fighter1: {
-        name: "Nathan Barnatt",
+        name: "Dad",
         height: "6' 0\"",
         weight: "170 LBS",
         img: barnattPic,
@@ -240,7 +246,7 @@ export default function Matchups() {
         },
       },
       fighter2: {
-        name: "Jago Shakoori",
+        name: "Jago",
         height: "5' 11\"",
         weight: "170 LBS",
         img: shakooriPic,

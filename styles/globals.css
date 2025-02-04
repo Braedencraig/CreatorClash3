@@ -24,6 +24,30 @@ input + .error {
   color: red;
 }
 
+.check-field {
+  display: inline-flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.check-field input {
+  width: 20px !important;
+  height: 20px !important;
+  min-width: 20px !important;
+  max-width: 20px !important;
+  min-height: 20px !important;
+  max-height: 20px !important;
+  cursor: pointer;
+}
+
+.check-field label {
+  font-size: 12px;
+  line-height: 1.75;
+  cursor: pointer;
+}
+
 .pxglow {
   font-family: "bitcount-mono-single-square", sans-serif !important;
   text-transform: uppercase !important;
@@ -134,7 +158,7 @@ input + .error {
   align-items: stretch;
   justify-content: flex-start;
   gap: 20px;
-  width: 33.33333%;
+  width: 40%;
   flex-shrink: 0;
 }
 

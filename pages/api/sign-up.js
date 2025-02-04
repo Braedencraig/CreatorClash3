@@ -1,9 +1,10 @@
 import { google } from "googleapis";
 
 async function handlePost(req, res) {
-	const { email } = req.body;
+	const { email, consent } = req.body;
 
 	if (! email) throw new Error('A valid email is required');
+	if (! consent) throw new Error('Consent to receive communications is required');
 
   const auth = new google.auth.GoogleAuth({
 		credentials: {

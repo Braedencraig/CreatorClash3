@@ -9,7 +9,7 @@ export default function Hero({ setLaunchModal }) {
       {/* <h1>Influencers will pay.</h1> */}
       <div className="info pxglow">
         <h2>Saturday, June 28 2025</h2>
-        <h2>Amelie Arena // Tampa, FL</h2>
+        <h2>Amalie Arena // Tampa, FL</h2>
       </div>
       <div className="buttons">
         <Button
