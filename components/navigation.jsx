@@ -3,35 +3,19 @@ import Link from "next/link";
 import Image from "next/image";
 import Hamburger from "hamburger-react";
 import Dropdown from "./dropdown";
-import { useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import logo from "../public/assets/cc3.png";
 import tiktok from "../public/assets/tiktok.png";
 import insta from "../public/assets/insta.png";
 import twitter from "../public/assets/twitter.png";
 import youtube from "../public/assets/youtube.png";
 import Button from "./button";
+import { AppContext } from "../pages/_app";
 
-export default function Navigation({
-  isOpen,
-  setOpen,
-  open,
-  setOpenDropdown,
-  launchModal,
-  setLaunchModal,
-}) {
-  const handleMenuOne = () => {
-    window.open("https://www.ticketmaster.com/event/0D005E33DAC2E9EC");
-  };
+export default function Navigation() {
 
-  const handleMenuTwo = () => {
-    setLaunchModal(true);
-  };
-
-  useEffect(() => {
-    if (!isOpen) {
-      setLaunchModal(false);
-    }
-  }, [isOpen]);
+  const {isMobileMenuOpen, setIsMobileMenuOpen, setIsTicketModalOpen} = useContext(AppContext);
+  const [isDropdownOpen, setIsDropDownOpen] = useState(false);
 
   return (
     <div className="navigation">
@@ -51,9 +35,9 @@ export default function Navigation({
         <li>
           <Link href="/faq">FAQ</Link>
         </li>
-        <li>
+        {/* <li>
           <Link href="/contact">Contact</Link>
-        </li>
+        </li> */}
         {/* <li>
           <a
             href="https://store.thecreatorclash.com/"
@@ -103,25 +87,27 @@ export default function Navigation({
           </div>
         </div>
         <Dropdown
-          open={open}
-          setOpenDropdown={setOpenDropdown}
+          open={isDropdownOpen}
+          setOpenDropdown={setIsDropDownOpen}
           trigger={
             <Button>
               {'Tickets ˅'}
             </Button>
           }
           menu={[
-            <Button href="/#presale" onClick={console.info}>
-              {'Presale >'}
-            </Button>
-            // <Button onClick={handleMenuOne}>{'Event Tickets >'}</Button>,
-            // <Button onClick={handleMenuTwo}>
-            //   {'PPV Tickets >'}
-            // </Button>,
+            // <Button href="/#presale">
+            //   {'Presale >'}
+            // </Button>
+            <Button href="https://www.ticketmaster.com/creator-clash-3-tampa-florida-06-28-2025/event/0D00623B8E6E110A">
+              {'Event Tickets >'}
+            </Button>,
+            <Button onClick={() => setIsTicketModalOpen(true)}>
+              {'PPV Tickets >'}
+            </Button>,
           ]}
         />
       </div>
-      <Hamburger toggled={isOpen} toggle={setOpen} />
+      <Hamburger toggled={isMobileMenuOpen} toggle={setIsMobileMenuOpen} />
     </div>
   );
 }
