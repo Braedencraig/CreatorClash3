@@ -55,14 +55,14 @@ export default function SignUpForm() {
         )}
         {isSuccess && (
           <h3 className="sign-up-form-success pxglow">
-            {'Success! You\'re now signed up for the presale.'}
+            {'Success! You\'re now subscribed for updates.'}
           </h3>
         )}
         {!isSuccess && (
           <form onSubmit={handleSubmit}>
             <div className="sign-up-form-copy">
-              <h2 className="pxglow">{'Sign up for the presale today'}</h2>
-              <p>{'Don\'t miss the mayhem! Tickets go on sale soon. Enter your email and we\'ll keep you posted.'}</p>
+              <h2 className="pxglow">{'Subscribe for updates'}</h2>
+              <p>{'Don\'t miss the mayhem! Enter your email and we\'ll keep you posted on matchups, ticket info, and all things Creator Clash.'}</p>
               <ul className="pxglow" style={{ marginTop: '40px', fontSize: '18px', marginLeft: '1em' }}>
                 <li><span style={{ fontWeight: 400 }}>{'Presale begins'}</span> {'Wednesday, Feb 5 - 10am ET'}</li>
                 <li><span style={{ fontWeight: 400 }}>{'Presale ends'}</span> {'Thursday, Feb 6 - 10pm ET'}</li>
