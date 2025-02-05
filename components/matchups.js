@@ -140,6 +140,7 @@ export default function Matchups() {
         socials: {
           tiktok: "https://www.tiktok.com/@jaelaray",
           insta: "https://www.instagram.com/jaelaray/",
+          twitch: "https://www.twitch.tv/jaelaray",
           youtube: "https://www.youtube.com/@jaelaray",
           twitter: "https://x.com/jaelalaray",
         },
