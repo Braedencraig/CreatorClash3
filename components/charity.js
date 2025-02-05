@@ -78,7 +78,7 @@ export default function Charity() {
 
   const partners = [
     {
-      link: "https://livenation.com",
+      link: "https://www.ticketmaster.com/creator-clash-3-tampa-florida-06-28-2025/event/0D00623B8E6E110A",
       img: liveNationLogo,
     },
     {
