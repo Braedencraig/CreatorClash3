@@ -40,7 +40,7 @@ export default function Matchups() {
       },
       fighter2: {
         name: "Harley Morenstein",
-        height: "6' 4\"",
+        height: "6' 6\"",
         weight: "200+ LBS",
         img: morensteinPic,
         socials: {
@@ -66,7 +66,7 @@ export default function Matchups() {
       },
       fighter2: {
         name: "Sapnap",
-        height: "5' 8\"",
+        height: "5' 7\"",
         weight: "147 LBS",
         img: sapnapPic,
         socials: {
@@ -162,7 +162,7 @@ export default function Matchups() {
       fighter1: {
         name: "Freddie Wong",
         height: "5' 7\"",
-        weight: "170 LBS",
+        weight: "175 LBS",
         img: wongPic,
         socials: {
           insta: "https://www.instagram.com/fwong/",
@@ -173,7 +173,7 @@ export default function Matchups() {
       fighter2: {
         name: "GingerPale",
         height: "5' 9\"",
-        weight: "170 LBS",
+        weight: "175 LBS",
         img: gingerPalePic,
         socials: {
           insta: "https://www.instagram.com/thegingerpale/",
