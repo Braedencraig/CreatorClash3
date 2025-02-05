@@ -63,7 +63,7 @@ export default function SignUpForm() {
             <div className="sign-up-form-copy">
               <h2 className="pxglow">{'Subscribe for updates'}</h2>
               <p>{'Don\'t miss the mayhem! Enter your email and we\'ll keep you posted on matchups, ticket info, and all things Creator Clash.'}</p>
-              <ul className="pxglow" style={{ marginTop: '40px', fontSize: '18px', marginLeft: '1em' }}>
+              <ul className="pxglow" style={{ marginTop: '40px', fontSize: '18px', marginLeft: '1em', textAlign: 'start' }}>
                 <li><span style={{ fontWeight: 400 }}>{'Presale begins'}</span> {'Wednesday, Feb 5 - 10am ET'}</li>
                 <li><span style={{ fontWeight: 400 }}>{'Presale ends'}</span> {'Thursday, Feb 6 - 10pm ET'}</li>
                 <li><span style={{ fontWeight: 400 }}>{'Public on sale begins'}</span> {'Friday, Feb 7 - 10am ET'}</li>
@@ -94,7 +94,7 @@ export default function SignUpForm() {
                 </div>
               </div>
               <Button type="submit" disabled={isSubmitting}>
-                {'Sign up >'}
+                {'Subscribe >'}
               </Button>
             </div>
           </form>
