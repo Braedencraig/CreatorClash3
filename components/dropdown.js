@@ -1,12 +1,31 @@
-import { useState, cloneElement } from "react";
+import { cloneElement, useRef, useEffect } from "react";
 
 const Dropdown = ({ trigger, menu, open, setOpenDropdown }) => {
+
+  const rootRef = useRef(null);
+
   const handleOpen = () => {
     setOpenDropdown(!open);
   };
 
+  useEffect(() => {
+    if (!open) return;
+
+    function handleWindowClick(e) {
+      if (! rootRef.current?.contains(e.target)) {
+        setOpenDropdown(false);
+      }
+    }
+
+    window.addEventListener('click', handleWindowClick);
+
+    return () => {
+      window.removeEventListener('click', handleWindowClick)
+    }
+  }, [open, setOpenDropdown]);
+
   return (
-    <div className="dropdown">
+    <div ref={rootRef} className="dropdown">
       {cloneElement(trigger, {
         onClick: handleOpen,
       })}
@@ -16,7 +35,7 @@ const Dropdown = ({ trigger, menu, open, setOpenDropdown }) => {
             <li key={index} className="menu-item">
               {cloneElement(menuItem, {
                 onClick: () => {
-                  menuItem.props.onClick();
+                  if (menuItem.props.onClick) menuItem.props.onClick();
                   setOpenDropdown(false);
                 },
               })}
