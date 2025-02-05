@@ -31,11 +31,22 @@ input + .error {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  position: relative;
+}
+
+.page-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  display: block;
+  background-color: #000;
+  opacity: .25;
 }
 
 .page-header-container {
   margin: 0 auto;
   max-width: 1200px;
+  position: relative;
 }
 
 .mobile-menu {
@@ -109,7 +120,17 @@ input + .error {
   align-items: center;
   justify-content: center;
   gap: 20px;
-  padding: 200px 40px 120px;
+  padding: 240px 40px 140px;
+}
+
+.new-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  display: block;
+  background-color: #000;
+  opacity: .25;
+  z-index: 1;
 }
 
 .new-hero-background {
@@ -128,6 +149,7 @@ input + .error {
   width: 640px;
   height: auto;
   max-width: 100%;
+  z-index: 1;
 }
 
 .new-hero-content {
@@ -138,6 +160,7 @@ input + .error {
   justify-content: center;
   gap: 60px;
   text-align: center;
+  z-index: 1;
 }
 
 .new-hero-info {
@@ -843,7 +866,7 @@ a {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1600px;
+  /* max-width: 1600px; */
   font-weight: 700;
   position: relative;
   padding: 40px;
