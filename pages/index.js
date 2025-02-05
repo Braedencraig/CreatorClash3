@@ -16,7 +16,7 @@ export default function Home() {
       <div id="matchups">
         <Matchups />
       </div>
-      <div id="presale">
+      <div id="subscribe">
         <SignUpForm />
       </div>
       {/* <div id="announcers">
