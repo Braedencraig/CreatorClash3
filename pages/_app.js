@@ -66,6 +66,15 @@ export default function App({ Component, pageProps }) {
                 {'FAQ'}
               </Link>
             </li>
+            <li>
+              <Link
+                href="/#subscribe"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="pxglow"
+              >
+                {'Subscribe'}
+              </Link>
+            </li>
             {/* <li>
               <Link
                 href="/contact"
