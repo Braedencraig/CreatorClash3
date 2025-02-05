@@ -19,7 +19,7 @@ import laBeastPic from "../public/assets/cc3-LA-Beast-(Kevin-Strahle).jpg";
 import ayadPic from "../public/assets/cc3-Lena-Ayad.jpg";
 import barnattPic from "../public/assets/cc3-Nathan-Barnatt.jpg";
 import odd1sOutPic from "../public/assets/cc3-TheOdd1sOut-(James-Rallison).jpg";
-import seriousPic from "../public/assets/cc3-Trevor-Serious.jpg";
+import seriousPic from "../public/assets/cc3-Trevor-Serious-2.jpg";
 import tubboPic from "../public/assets/cc3-Tubbo.jpg";
 import neffPic from "../public/assets/cc3-Will-Neff.jpg";
 import weichmanPic from "../public/assets/cc3-Wren-Weichman-(Corridor-Digital).jpg";
