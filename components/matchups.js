@@ -84,9 +84,9 @@ export default function Matchups() {
         weight: "185 LBS",
         img: smg4Pic,
         socials: {
-          insta: "https://www.instagram.com/glitch_prod/",
+          insta: "https://www.instagram.com/kevdevz",
           youtube: "https://www.youtube.com/c/GLITCH",
-          twitter: "https://twitter.com/glitch_prod",
+          twitter: "https://x.com/kevdevz",
         },
       },
       fighter2: {
@@ -341,9 +341,9 @@ export default function Matchups() {
                       <h3 className="reverse-h3 pxglow">{matchup.fighter2.name}</h3>
                       <div className="stat pxglow">
                         <p className="red" style={{ maxWidth: '100%' }}>
-                          Height: <strong>{matchup.fighter1.height}</strong>
+                          Height: <strong>{matchup.fighter2.height}</strong>
                           <br/>
-                          Fight Weight: <strong>{matchup.fighter1.weight}</strong>
+                          Fight Weight: <strong>{matchup.fighter2.weight}</strong>
                         </p>
                       </div>
                       <div className="fight-card-matchup-socials">
