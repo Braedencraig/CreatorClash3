@@ -85,7 +85,7 @@ export default function Matchups() {
         img: smg4Pic,
         socials: {
           insta: "https://www.instagram.com/kevdevz",
-          youtube: "https://www.youtube.com/c/GLITCH",
+          youtube: "https://www.youtube.com/@GLITCH",
           twitter: "https://x.com/kevdevz",
         },
       },
