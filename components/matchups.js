@@ -17,7 +17,7 @@ import shakooriPic from "../public/assets/cc3-Jago-Shakoori.jpg";
 import smg4Pic from "../public/assets/cc3-Kevin-Lerdwichagul-(SMG4).jpg";
 import laBeastPic from "../public/assets/cc3-LA-Beast-(Kevin-Strahle).jpg";
 import ayadPic from "../public/assets/cc3-Lena-Ayad.jpg";
-import barnattPic from "../public/assets/cc3-Nathan-Barnatt.jpg";
+import barnattPic from "../public/assets/cc3-Dad.jpg";
 import odd1sOutPic from "../public/assets/cc3-TheOdd1sOut-(James-Rallison).jpg";
 import seriousPic from "../public/assets/cc3-Trevor-Serious-2.jpg";
 import tubboPic from "../public/assets/cc3-Tubbo.jpg";
