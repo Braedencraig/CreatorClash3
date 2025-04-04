@@ -1,11 +1,11 @@
 import { Html, Head, Main, NextScript } from 'next/document'
+import Script from 'next/script'
 
 export default function Document() {
   return (
     <Html lang="en">
       <Head>
         <meta key="description" name="description" content="Welcome to the official home of Creator Clash!" />
-        <meta key="viewport" name="viewport" content="width=device-width, initial-scale=1" />
         <link key="favicon" rel="icon" href="/favicon.ico" />
         <meta key="charset" charSet="utf-8" />
         <meta key="theme-color" name="theme-color" content="#000000" />
@@ -22,7 +22,9 @@ export default function Document() {
         <meta key="twitter:image" name="twitter:image" content="/assets/social-thumb.png" />
         <meta key="twitter:card" name="twitter:card" content="summary_large_image" />
         <link rel="stylesheet" href="https://use.typekit.net/atz0jdl.css" />
-        </Head>
+        {/* The Trade Desk (Programmatic) - Dep script (See tracking-codes.js) */}
+        <Script id="ttd-script" strategy="beforeInteractive" src="https://js.adsrvr.org/up_loader.1.1.0.js" />
+      </Head>
       <body>
         <Main />
         <NextScript />
