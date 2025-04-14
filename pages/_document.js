@@ -23,7 +23,8 @@ export default function Document() {
         <meta key="twitter:card" name="twitter:card" content="summary_large_image" />
         <link rel="stylesheet" href="https://use.typekit.net/atz0jdl.css" />
         {/* The Trade Desk (Programmatic) - Dep script (See tracking-codes.js) */}
-        <Script id="ttd-script" strategy="beforeInteractive" src="https://js.adsrvr.org/up_loader.1.1.0.js" />
+        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
+        <script key="ttd-script" src="https://js.adsrvr.org/up_loader.1.1.0.js" />
       </Head>
       <body>
         <Main />
