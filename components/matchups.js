@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useLayoutEffect, useRef, useState } from "react";
 import Image from "next/image";
 import tiktok from "../public/assets/tiktok.png";
 import insta from "../public/assets/insta.png";
@@ -11,18 +11,20 @@ import spagnolaPic from "../public/assets/cc3-Ali-Spagnola.jpg";
 import gingerPalePic from "../public/assets/cc3-gingerpale.jpg";
 import wongPic from "../public/assets/cc3-Freddie-Wong.jpg";
 import funkyFrogBaitPic from "../public/assets/cc3-FunkyFrogBait.jpg";
-import morensteinPic from "../public/assets/cc3-Harley-Morenstein.jpg";
+// import morensteinPic from "../public/assets/cc3-Harley-Morenstein.jpg";
 import jaelarayPic from "../public/assets/cc3-Jaelaray.jpg";
 import shakooriPic from "../public/assets/cc3-Jago-Shakoori.jpg";
 import smg4Pic from "../public/assets/cc3-Kevin-Lerdwichagul-(SMG4).jpg";
 import laBeastPic from "../public/assets/cc3-LA-Beast-(Kevin-Strahle).jpg";
-import ayadPic from "../public/assets/cc3-Lena-Ayad.jpg";
+// import ayadPic from "../public/assets/cc3-Lena-Ayad.jpg";
 import barnattPic from "../public/assets/cc3-Dad.jpg";
 import odd1sOutPic from "../public/assets/cc3-TheOdd1sOut-(James-Rallison).jpg";
 import seriousPic from "../public/assets/cc3-Trevor-Serious-2.jpg";
 import tubboPic from "../public/assets/cc3-Tubbo.jpg";
 import neffPic from "../public/assets/cc3-Will-Neff.jpg";
 import weichmanPic from "../public/assets/cc3-Wren-Weichman-(Corridor-Digital).jpg";
+import maleTBDPic from "../public/assets/fighter-tbd.jpg";
+import femaleTBDPic from "../public/assets/fighter-female-tbd.jpg";
 
 export default function Matchups() {
   const matchups = [
@@ -39,16 +41,18 @@ export default function Matchups() {
         },
       },
       fighter2: {
-        name: "Harley Morenstein",
-        height: "6' 6\"",
-        weight: "200+ LBS",
-        img: morensteinPic,
-        socials: {
-          tiktok: "https://www.tiktok.com/@harleyplays",
-          insta: "https://www.instagram.com/harleyplays/",
-          youtube: "https://www.youtube.com/@epicmealtime",
-          twitter: "https://twitter.com/HarleyPlays",
-        },
+        name: "TBD",
+        img: maleTBDPic,
+        // name: "Harley Morenstein",
+        // height: "6' 6\"",
+        // weight: "200+ LBS",
+        // img: morensteinPic,
+        // socials: {
+        //   tiktok: "https://www.tiktok.com/@harleyplays",
+        //   insta: "https://www.instagram.com/harleyplays/",
+        //   youtube: "https://www.youtube.com/@epicmealtime",
+        //   twitter: "https://twitter.com/HarleyPlays",
+        // },
       },
     },
     {
@@ -209,16 +213,18 @@ export default function Matchups() {
     },
     {
       fighter1: {
-        name: "Lena Ayad",
-        height: "5' 4\"",
-        weight: "125 LBS",
-        img: ayadPic,
-        socials: {
-          tiktok: "https://www.tiktok.com/@lena.ayad",
-          insta: "https://www.instagram.com/_lenaayad/",
-          youtube: "https://www.youtube.com/@lenastarkilla",
-          twitter: "https://x.com/LenaAyad_",
-        },
+        name: "TBD",
+        img: femaleTBDPic,
+        // name: "Lena Ayad",
+        // height: "5' 4\"",
+        // weight: "125 LBS",
+        // img: ayadPic,
+        // socials: {
+        //   tiktok: "https://www.tiktok.com/@lena.ayad",
+        //   insta: "https://www.instagram.com/_lenaayad/",
+        //   youtube: "https://www.youtube.com/@lenastarkilla",
+        //   twitter: "https://x.com/LenaAyad_",
+        // },
       },
       fighter2: {
         name: "FunkyFrogBait",
@@ -270,129 +276,133 @@ export default function Matchups() {
                   <div className="fight-card-mobile-images fight-card-matchup-fighter-info">
                     <div className="not-reverse">
                       <Image
-                        src={matchup.fighter1.img}
+                        src={matchup.fighter1.img || maleTBDPic}
                         // className="border-fighter"
-                        alt="Fighter"
+                        alt={matchup.fighter1.name || 'Fighter'}
                       />
-                      <h3 className="pxglow">{matchup.fighter1.name}</h3>
+                      <h3 className="pxglow">{matchup.fighter1.name || 'TBD'}</h3>
                       <div className="stat pxglow">
                         <p className="blue" style={{ maxWidth: '100%' }}>
-                          Height: <strong>{matchup.fighter1.height}</strong>
+                          Height: <strong>{matchup.fighter1.height || '―'}</strong>
                           <br/>
-                          Fight Weight: <strong>{matchup.fighter1.weight}</strong>
+                          Fight Weight: <strong>{matchup.fighter1.weight || '―'}</strong>
                         </p>
                       </div>
-                      <div className="fight-card-matchup-socials">
-                        {matchup.fighter1.socials.tiktok && (
-                          <a
-                            href={matchup.fighter1.socials.tiktok}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            <Image src={tiktok} alt="tiktok" />
-                          </a>
-                        )}
-                        {matchup.fighter1.socials.insta && (
-                          <a
-                            href={matchup.fighter1.socials.insta}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            <Image src={insta} alt="instagram" />
-                          </a>
-                        )}
-                        {matchup.fighter1.socials.twitter && (
-                          <a
-                            href={matchup.fighter1.socials.twitter}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            <Image src={twitter} alt="twitter" />
-                          </a>
-                        )}
-                        {matchup.fighter1.socials.youtube && (
-                          <a
-                            href={matchup.fighter1.socials.youtube}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            <Image src={youtube} alt="youtube" />
-                          </a>
-                        )}
-                        {matchup.fighter1.socials.twitch && (
-                          <a
-                            href={matchup.fighter1.socials.twitch}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            <Image src={twitch} alt="twitch" />
-                          </a>
-                        )}
-                      </div>
+                      {matchup.fighter1.socials && (
+                        <div className="fight-card-matchup-socials">
+                          {matchup.fighter1.socials.tiktok && (
+                            <a
+                              href={matchup.fighter1.socials.tiktok}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              <Image src={tiktok} alt="tiktok" />
+                            </a>
+                          )}
+                          {matchup.fighter1.socials.insta && (
+                            <a
+                              href={matchup.fighter1.socials.insta}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              <Image src={insta} alt="instagram" />
+                            </a>
+                          )}
+                          {matchup.fighter1.socials.twitter && (
+                            <a
+                              href={matchup.fighter1.socials.twitter}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              <Image src={twitter} alt="twitter" />
+                            </a>
+                          )}
+                          {matchup.fighter1.socials.youtube && (
+                            <a
+                              href={matchup.fighter1.socials.youtube}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              <Image src={youtube} alt="youtube" />
+                            </a>
+                          )}
+                          {matchup.fighter1.socials.twitch && (
+                            <a
+                              href={matchup.fighter1.socials.twitch}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              <Image src={twitch} alt="twitch" />
+                            </a>
+                          )}
+                        </div>
+                      )}
                     </div>
                     <div className="mobile-vs pxglow">
                       <span>VS</span>
                     </div>
                     <div className="reverse">
                       <Image
-                        src={matchup.fighter2.img}
-                        alt="Fighter"
+                        src={matchup.fighter2.img || maleTBDPic}
+                        alt={matchup.fighter2.name || 'Fighter'}
                       />
-                      <h3 className="reverse-h3 pxglow">{matchup.fighter2.name}</h3>
+                      <h3 className="reverse-h3 pxglow">{matchup.fighter2.name || 'TBD'}</h3>
                       <div className="stat pxglow">
                         <p className="red" style={{ maxWidth: '100%' }}>
-                          Height: <strong>{matchup.fighter2.height}</strong>
+                          Height: <strong>{matchup.fighter2.height || '―'}</strong>
                           <br/>
-                          Fight Weight: <strong>{matchup.fighter2.weight}</strong>
+                          Fight Weight: <strong>{matchup.fighter2.weight || '―'}</strong>
                         </p>
                       </div>
-                      <div className="fight-card-matchup-socials">
-                        {matchup.fighter2.socials.tiktok && (
-                          <a
-                            href={matchup.fighter2.socials.tiktok}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            <Image src={tiktok} alt="tiktok" />
-                          </a>
-                        )}
-                        {matchup.fighter2.socials.insta && (
-                          <a
-                            href={matchup.fighter2.socials.insta}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            <Image src={insta} alt="instagram" />
-                          </a>
-                        )}
-                        {matchup.fighter2.socials.twitter && (
-                          <a
-                            href={matchup.fighter2.socials.twitter}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            <Image src={twitter} alt="twitter" />
-                          </a>
-                        )}
-                        {matchup.fighter2.socials.youtube && (
-                          <a
-                            href={matchup.fighter2.socials.youtube}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            <Image src={youtube} alt="youtube" />
-                          </a>
-                        )}
-                        {matchup.fighter2.socials.twitch && (
-                          <a
-                            href={matchup.fighter2.socials.twitch}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            <Image src={twitch} alt="twitch" />
-                          </a>
-                        )}
-                      </div>
+                      {matchup.fighter2.socials && (
+                        <div className="fight-card-matchup-socials">
+                          {matchup.fighter2.socials.tiktok && (
+                            <a
+                              href={matchup.fighter2.socials.tiktok}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              <Image src={tiktok} alt="tiktok" />
+                            </a>
+                          )}
+                          {matchup.fighter2.socials.insta && (
+                            <a
+                              href={matchup.fighter2.socials.insta}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              <Image src={insta} alt="instagram" />
+                            </a>
+                          )}
+                          {matchup.fighter2.socials.twitter && (
+                            <a
+                              href={matchup.fighter2.socials.twitter}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              <Image src={twitter} alt="twitter" />
+                            </a>
+                          )}
+                          {matchup.fighter2.socials.youtube && (
+                            <a
+                              href={matchup.fighter2.socials.youtube}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              <Image src={youtube} alt="youtube" />
+                            </a>
+                          )}
+                          {matchup.fighter2.socials.twitch && (
+                            <a
+                              href={matchup.fighter2.socials.twitch}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              <Image src={twitch} alt="twitch" />
+                            </a>
+                          )}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -406,132 +416,136 @@ export default function Matchups() {
                   <div className="fight-card-matchup-fighter">
                     <div className="fight-card-matchup-fight-image">
                       <Image
-                        src={matchup.fighter1.img}
+                        src={matchup.fighter1.img || maleTBDPic}
                         // className="border-fighter"
-                        alt="Fighter"
+                        alt={matchup.fighter1.name || 'Fighter'}
                       />
-                      <div className="fight-card-matchup-socials">
-                        {matchup.fighter1.socials.tiktok && (
-                          <a
-                            href={matchup.fighter1.socials.tiktok}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            <Image src={tiktok} alt="tiktok" />
-                          </a>
-                        )}
-                        {matchup.fighter1.socials.insta && (
-                          <a
-                            href={matchup.fighter1.socials.insta}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            <Image src={insta} alt="instagram" />
-                          </a>
-                        )}
-                        {matchup.fighter1.socials.twitter && (
-                          <a
-                            href={matchup.fighter1.socials.twitter}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            <Image src={twitter} alt="twitter" />
-                          </a>
-                        )}
-                        {matchup.fighter1.socials.youtube && (
-                          <a
-                            href={matchup.fighter1.socials.youtube}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            <Image src={youtube} alt="youtube" />
-                          </a>
-                        )}
-                        {matchup.fighter1.socials.twitch && (
-                          <a
-                            href={matchup.fighter1.socials.twitch}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            <Image src={twitch} alt="twitch" />
-                          </a>
-                        )}
-                      </div>
+                      {matchup.fighter1.socials && (
+                        <div className="fight-card-matchup-socials">
+                          {matchup.fighter1.socials.tiktok && (
+                            <a
+                              href={matchup.fighter1.socials.tiktok}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              <Image src={tiktok} alt="tiktok" />
+                            </a>
+                          )}
+                          {matchup.fighter1.socials.insta && (
+                            <a
+                              href={matchup.fighter1.socials.insta}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              <Image src={insta} alt="instagram" />
+                            </a>
+                          )}
+                          {matchup.fighter1.socials.twitter && (
+                            <a
+                              href={matchup.fighter1.socials.twitter}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              <Image src={twitter} alt="twitter" />
+                            </a>
+                          )}
+                          {matchup.fighter1.socials.youtube && (
+                            <a
+                              href={matchup.fighter1.socials.youtube}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              <Image src={youtube} alt="youtube" />
+                            </a>
+                          )}
+                          {matchup.fighter1.socials.twitch && (
+                            <a
+                              href={matchup.fighter1.socials.twitch}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              <Image src={twitch} alt="twitch" />
+                            </a>
+                          )}
+                        </div>
+                      )}
                     </div>
                   </div>
                   <div className="middle pxglow">
                     <div className="fight-card-matchup-fighter-info pxglow">
-                      <h3>{matchup.fighter1.name}</h3>
+                      <h3>{matchup.fighter1.name || "TBD"}</h3>
                       <span>VS</span>
-                      <h3 className={`reverse-h3`}>{matchup.fighter2.name}</h3>
+                      <h3 className={`reverse-h3`}>{matchup.fighter2.name || "TBD"}</h3>
                     </div>
                     <div className="table">
                       <div className="table-row">
-                        <p className="blue">{matchup.fighter1.height}</p>
+                        <p className="blue">{matchup.fighter1.height || '―'}</p>
                         <p>Height</p>
-                        <p className="red">{matchup.fighter2.height}</p>
+                        <p className="red">{matchup.fighter2.height || '―'}</p>
                       </div>
                       <div className="table-row">
-                        <p className="blue">{matchup.fighter1.weight}</p>
+                        <p className="blue">{matchup.fighter1.weight || '―'}</p>
                         <p>Fight Weight</p>
-                        <p className="red">{matchup.fighter2.weight}</p>
+                        <p className="red">{matchup.fighter2.weight || '―'}</p>
                       </div>
                     </div>
                   </div>
                   <div className="fight-card-matchup-fighter reverse">
                     <div className="fight-card-matchup-fight-image">
                       <Image
-                        src={matchup.fighter2.img}
+                        src={matchup.fighter2.img || maleTBDPic}
                         // className="border-fighter"
-                        alt="Fighter"
+                        alt={matchup.fighter2.name || 'Fighter'}
                       />
-                      <div className="fight-card-matchup-socials">
-                        {matchup.fighter2.socials.tiktok && (
-                          <a
-                            href={matchup.fighter2.socials.tiktok}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            <Image src={tiktok} alt="tiktok" />
-                          </a>
-                        )}
-                        {matchup.fighter2.socials.insta && (
-                          <a
-                            href={matchup.fighter2.socials.insta}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            <Image src={insta} alt="instagram" />
-                          </a>
-                        )}
-                        {matchup.fighter2.socials.twitter && (
-                          <a
-                            href={matchup.fighter2.socials.twitter}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            <Image src={twitter} alt="twitter" />
-                          </a>
-                        )}
-                        {matchup.fighter2.socials.youtube && (
-                          <a
-                            href={matchup.fighter2.socials.youtube}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            <Image src={youtube} alt="youtube" />
-                          </a>
-                        )}
-                        {matchup.fighter2.socials.twitch && (
-                          <a
-                            href={matchup.fighter2.socials.twitch}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            <Image src={twitch} alt="twitch" />
-                          </a>
-                        )}
-                      </div>
+                      {matchup.fighter2.socials && (
+                        <div className="fight-card-matchup-socials">
+                          {matchup.fighter2.socials.tiktok && (
+                            <a
+                              href={matchup.fighter2.socials.tiktok}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              <Image src={tiktok} alt="tiktok" />
+                            </a>
+                          )}
+                          {matchup.fighter2.socials.insta && (
+                            <a
+                              href={matchup.fighter2.socials.insta}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              <Image src={insta} alt="instagram" />
+                            </a>
+                          )}
+                          {matchup.fighter2.socials.twitter && (
+                            <a
+                              href={matchup.fighter2.socials.twitter}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              <Image src={twitter} alt="twitter" />
+                            </a>
+                          )}
+                          {matchup.fighter2.socials.youtube && (
+                            <a
+                              href={matchup.fighter2.socials.youtube}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              <Image src={youtube} alt="youtube" />
+                            </a>
+                          )}
+                          {matchup.fighter2.socials.twitch && (
+                            <a
+                              href={matchup.fighter2.socials.twitch}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              <Image src={twitch} alt="twitch" />
+                            </a>
+                          )}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
