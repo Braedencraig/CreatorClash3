@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef, useState } from "react";
+import React from "react";
 import Image from "next/image";
 import tiktok from "../public/assets/tiktok.png";
 import insta from "../public/assets/insta.png";
