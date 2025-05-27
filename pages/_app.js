@@ -73,13 +73,22 @@ export default function App({ Component, pageProps }) {
               </li>
               <li>
                 <Link
+                  href="/transparency"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="pxglow"
+                >
+                  {'Transparency'}
+                </Link>
+              </li>
+              {/* <li>
+                <Link
                   href="/#subscribe"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="pxglow"
                 >
                   {'Subscribe'}
                 </Link>
-              </li>
+              </li> */}
               {/* <li>
                 <Link
                   href="/contact"

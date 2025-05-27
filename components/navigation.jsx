@@ -36,8 +36,11 @@ export default function Navigation() {
           <Link href="/faq">FAQ</Link>
         </li>
         <li>
-          <Link href="/#subscribe">Subscribe</Link>
+          <Link href="/transparency">Transparency</Link>
         </li>
+        {/* <li>
+          <Link href="/#subscribe">Subscribe</Link>
+        </li> */}
         {/* <li>
           <Link href="/contact">Contact</Link>
         </li> */}
