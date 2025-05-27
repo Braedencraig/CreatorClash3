@@ -1363,6 +1363,15 @@ a {
   margin-bottom: 0;
 }
 
+.faq .accordion-content ul {
+  list-style: square !important;
+  padding-left: 1em;
+}
+
+.faq .accordion-content ul li {
+  margin-bottom: 0.5em;
+}
+
 @media (max-width: 1400px) {
 
   .table-row a {
