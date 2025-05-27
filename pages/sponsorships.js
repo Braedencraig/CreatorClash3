@@ -13,7 +13,7 @@ import close from "../public/assets/close.png";
 import SEO from "../components/seo";
 import Button from "../components/button";
 
-export default function Home() {
+export default function SponsorshipsPage() {
   const [isOpen, setOpen] = useState(false);
   const [open, setOpenDropdown] = useState(false);
   const [launchModal, setLaunchModal] = useState(false);
