@@ -62,7 +62,7 @@ export default function App({ Component, pageProps }) {
                   {'Matchups'}
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   href="/faq"
                   onClick={() => setIsMobileMenuOpen(false)}
@@ -70,7 +70,7 @@ export default function App({ Component, pageProps }) {
                 >
                   {'FAQ'}
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
                   href="/transparency"
@@ -105,11 +105,11 @@ export default function App({ Component, pageProps }) {
               >
                 {'Sign up for presale >'}
               </Button> */}
-              <Button
+              {/* <Button
                 href="https://www.ticketmaster.com/creator-clash-3-tampa-florida-06-28-2025/event/0D00623B8E6E110A"
               >
                 {'Event Tickets >'}
-              </Button>
+              </Button> */}
               <Button
                 onClick={() => setIsTicketModalOpen(true)}
               >
