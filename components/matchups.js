@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import tiktok from "../public/assets/tiktok.png";
 import insta from "../public/assets/insta.png";
@@ -9,13 +8,13 @@ import mythPic from "../public/assets/cc3-Ali-Kabbani-(Myth).jpg";
 import sapnapPic from "../public/assets/cc3-sapnap.jpg";
 import spagnolaPic from "../public/assets/cc3-Ali-Spagnola.jpg";
 import gingerPalePic from "../public/assets/cc3-gingerpale.jpg";
-import wongPic from "../public/assets/cc3-Freddie-Wong.jpg";
+// import wongPic from "../public/assets/cc3-Freddie-Wong.jpg";
 import funkyFrogBaitPic from "../public/assets/cc3-FunkyFrogBait.jpg";
 // import morensteinPic from "../public/assets/cc3-Harley-Morenstein.jpg";
 import jaelarayPic from "../public/assets/cc3-Jaelaray.jpg";
 import shakooriPic from "../public/assets/cc3-Jago-Shakoori.jpg";
 import smg4Pic from "../public/assets/cc3-Kevin-Lerdwichagul-(SMG4).jpg";
-import laBeastPic from "../public/assets/cc3-LA-Beast-(Kevin-Strahle).jpg";
+// import laBeastPic from "../public/assets/cc3-LA-Beast-(Kevin-Strahle).jpg";
 // import ayadPic from "../public/assets/cc3-Lena-Ayad.jpg";
 import barnattPic from "../public/assets/cc3-Dad.jpg";
 import odd1sOutPic from "../public/assets/cc3-TheOdd1sOut-(James-Rallison).jpg";
@@ -30,15 +29,17 @@ export default function Matchups() {
   const matchups = [
     {
       fighter1: {
-        name: "LA Beast",
-        height: "6' 0\"",
-        weight: "200+ LBS",
-        img: laBeastPic,
-        socials: {
-          insta: "https://www.instagram.com/labeast62/",
-          youtube: "https://www.youtube.com/user/skippy62able",
-          twitter: "https://twitter.com/KevLAbeast",
-        },
+        name: "TBD",
+        img: maleTBDPic,
+        // name: "LA Beast",
+        // height: "6' 0\"",
+        // weight: "200+ LBS",
+        // img: laBeastPic,
+        // socials: {
+        //   insta: "https://www.instagram.com/labeast62/",
+        //   youtube: "https://www.youtube.com/user/skippy62able",
+        //   twitter: "https://twitter.com/KevLAbeast",
+        // },
       },
       fighter2: {
         name: "TBD",
@@ -164,15 +165,17 @@ export default function Matchups() {
     },
     {
       fighter1: {
-        name: "Freddie Wong",
-        height: "5' 7\"",
-        weight: "175 LBS",
-        img: wongPic,
-        socials: {
-          insta: "https://www.instagram.com/fwong/",
-          youtube: "https://www.youtube.com/user/freddiew",
-          twitter: "https://twitter.com/fwong",
-        },
+        name: "TBD",
+        img: maleTBDPic,
+        // name: "Freddie Wong",
+        // height: "5' 7\"",
+        // weight: "175 LBS",
+        // img: wongPic,
+        // socials: {
+        //   insta: "https://www.instagram.com/fwong/",
+        //   youtube: "https://www.youtube.com/user/freddiew",
+        //   twitter: "https://twitter.com/fwong",
+        // },
       },
       fighter2: {
         name: "GingerPale",

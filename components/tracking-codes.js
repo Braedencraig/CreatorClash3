@@ -10,9 +10,9 @@ export default function TrackingCodes() {
 
     const metaPixelIDs = useMemo(() => [
         // Live Nation US
-        '336617377178130',
+        // '336617377178130',
         // Live Nation Canada
-        '386920928936604',
+        // '386920928936604',
     ], []);
 
     const programmaticPixelIDs = useMemo(() => ({
@@ -55,23 +55,25 @@ export default function TrackingCodes() {
         <>
             <GoogleAnalytics trackPageViews debugMode={true} />
 
-            {/* Live Nation Meta Pixels */}
-            <Script id="ln-meta-pixels" dangerouslySetInnerHTML={{ __html: `
-                !function(f,b,e,v,n,t,s)
-                {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-                n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-                if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-                n.queue=[];t=b.createElement(e);t.async=!0;
-                t.src=v;s=b.getElementsByTagName(e)[0];
-                s.parentNode.insertBefore(t,s)}(window, document,'script',
-                'https://connect.facebook.net/en_US/fbevents.js');
-                // Init properties
-                ${metaPixelIDs.map(id => `window.fbq('init', '${id}');`).join('\n')}
-                // Run initial tracks
-                window.fbq('track', 'PageView');
-                window.fbq('track', 'ViewContent');
-                console.info('Meta pixels: Initial load - Tracked');
-            `}} />
+            {/* Meta Pixels */}
+            {(metaPixelIDs.length > 0) && (
+                <Script id="ln-meta-pixels" dangerouslySetInnerHTML={{ __html: `
+                    !function(f,b,e,v,n,t,s)
+                    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+                    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+                    n.queue=[];t=b.createElement(e);t.async=!0;
+                    t.src=v;s=b.getElementsByTagName(e)[0];
+                    s.parentNode.insertBefore(t,s)}(window, document,'script',
+                    'https://connect.facebook.net/en_US/fbevents.js');
+                    // Init properties
+                    ${metaPixelIDs.map(id => `window.fbq('init', '${id}');`).join('\n')}
+                    // Run initial tracks
+                    window.fbq('track', 'PageView');
+                    window.fbq('track', 'ViewContent');
+                    console.info('Meta pixels: Initial load - Tracked');
+                `}} />
+            )}
 
             {/* The Trade Desk Universal Programmatic Pixels */}
             <Script id="ttd-prog-pixels" dangerouslySetInnerHTML={{ __html: `
@@ -91,7 +93,7 @@ export default function TrackingCodes() {
                 }
             `}} />
             
-            {/* Live Nation Meta Pixel Noscripts */}
+            {/* Meta Pixel Noscripts */}
             {metaPixelIDs.map(id => (
                 <noscript id={`ln-meta-pixel-noscript-${id}`} key={`ln-meta-pixel-noscript-${id}`}>
                     <img height="1" width="1" style={{ display: 'none' }} src={`https://www.facebook.com/tr?id=${id}&ev=PageView&noscript=1`} />

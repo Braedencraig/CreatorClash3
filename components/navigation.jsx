@@ -32,12 +32,15 @@ export default function Navigation() {
         {/* <li>
           <Link href="/sponsorships">Sponsorships</Link>
         </li> */}
-        <li>
+        {/* <li>
           <Link href="/faq">FAQ</Link>
-        </li>
+        </li> */}
         <li>
-          <Link href="/#subscribe">Subscribe</Link>
+          <Link href="/transparency">Transparency</Link>
         </li>
+        {/* <li>
+          <Link href="/#subscribe">Subscribe</Link>
+        </li> */}
         {/* <li>
           <Link href="/contact">Contact</Link>
         </li> */}
@@ -101,9 +104,9 @@ export default function Navigation() {
             // <Button href="/#presale">
             //   {'Presale >'}
             // </Button>
-            <Button href="https://www.ticketmaster.com/creator-clash-3-tampa-florida-06-28-2025/event/0D00623B8E6E110A">
-              {'Event Tickets >'}
-            </Button>,
+            // <Button href="https://www.ticketmaster.com/creator-clash-3-tampa-florida-06-28-2025/event/0D00623B8E6E110A">
+            //   {'Event Tickets >'}
+            // </Button>,
             <Button onClick={() => setIsTicketModalOpen(true)}>
               {'PPV Tickets >'}
             </Button>,

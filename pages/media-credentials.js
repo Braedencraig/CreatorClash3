@@ -13,7 +13,7 @@ import { useForm } from "react-hook-form";
 import Button from "../components/button";
 import SEO from "../components/seo";
 
-export default function Home() {
+export default function MediaCredsPage() {
   const [isOpen, setOpen] = useState(false);
   const [open, setOpenDropdown] = useState(false);
   const [launchModal, setLaunchModal] = useState(false);

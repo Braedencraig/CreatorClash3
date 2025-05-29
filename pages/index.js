@@ -5,7 +5,7 @@ import Charity from "../components/charity";
 import Footer from "../components/footer";
 import SignUpForm from "../components/sign-up-form";
 
-export default function Home() {
+export default function HomePage() {
 
   return (
     <>

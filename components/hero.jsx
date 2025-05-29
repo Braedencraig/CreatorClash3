@@ -15,8 +15,8 @@ export default function Hero() {
       <Image priority={true} src={logo} alt="Creator Clash" className="new-hero-logo" style={{ paddingLeft: '3%' }} />
       <div className="new-hero-content">
         <div className="new-hero-info pxglow">
-          <h2>Saturday, June 28 2025</h2>
-          <h2>Amalie Arena // Tampa, FL</h2>
+          <h2>Saturday, October 25 2025</h2>
+          <h2>Hollywood Palladium // Los Angeles, CA</h2>
         </div>
         <div className="new-hero-buttons">
           {/* <Button
@@ -24,11 +24,11 @@ export default function Hero() {
           >
             {'Sign up for presale >'}
           </Button> */}
-          <Button
+          {/* <Button
             href="https://www.ticketmaster.com/creator-clash-3-tampa-florida-06-28-2025/event/0D00623B8E6E110A"
           >
             {'Event Tickets >'}
-          </Button>
+          </Button> */}
           <Button
             onClick={() => setIsTicketModalOpen(true)}
           >
