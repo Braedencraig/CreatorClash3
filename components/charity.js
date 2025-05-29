@@ -77,10 +77,10 @@ export default function Charity() {
   ];
 
   const partners = [
-    {
-      link: "https://www.ticketmaster.com/creator-clash-3-tampa-florida-06-28-2025/event/0D00623B8E6E110A",
-      img: liveNationLogo,
-    },
+    // {
+    //   link: "https://www.ticketmaster.com/creator-clash-3-tampa-florida-06-28-2025/event/0D00623B8E6E110A",
+    //   img: liveNationLogo,
+    // },
     {
       link: "https://veeps.com/creatorclash/5fb45c04-f63e-40d5-b8b5-79d37e3c54b5?utm_source=artist&utm_medium=organic&utm_campaign=artist-creatorclash",
       img: veepsLogo,
